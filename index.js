@@ -20,9 +20,13 @@ function rollDice() {
     let randomNumbers = randomNumberFunc();
     let randomNumber1 = randomNumbers[0];
     let randomNumber2 = randomNumbers[1];
+
+    // initial loop to cycle dice images
     for (i = 1; i <= 6; i++) {
-      p1DiceImg.setAttribute("src", `images/dice${i}.png`);
-      p2DiceImg.setAttribute("src", `images/dice${i}.png`);
+      for (j = 6; j >= 1; j--) {
+        p1DiceImg.setAttribute("src", `images/dice${i}.png`);
+        p2DiceImg.setAttribute("src", `images/dice${j}.png`);
+      }
     }
     p1DiceImg.setAttribute("src", `images/dice${randomNumber1}.png`);
     p2DiceImg.setAttribute("src", `images/dice${randomNumber2}.png`);

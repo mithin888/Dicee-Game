@@ -16,7 +16,7 @@ function randomNumberFunc() {
 
 // function for rolling dice
 function rollDice() {
-  button.addEventListener("click" function() {
+  button.addEventListener("click", (e) => {
     let randomNumbers = randomNumberFunc();
     let randomNumber1 = randomNumbers[0];
     let randomNumber2 = randomNumbers[1];
